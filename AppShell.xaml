@@ -14,7 +14,7 @@
         <ShellContent Title="Add Service" ContentTemplate="{DataTemplate local:ServiceEntryPage}" />
     </TabBar>
 
-    <!-- Adăugarea unui meniu pentru logare și profil -->
+   
     <MenuItem Text="Profile" Clicked="OnProfileMenuClicked" />
     <MenuItem Text="Logout" Clicked="OnLogoutMenuClicked" />
 </Shell>

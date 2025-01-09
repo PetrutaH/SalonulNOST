@@ -23,10 +23,10 @@ namespace SalonulNOST
 
             var selectedService = (Service)e.Item;
 
-            // Example action on service tap
+          
             await DisplayAlert("Serviciu selectat", $"{selectedService.Name} - {selectedService.Price:C}", "OK");
 
-            // Deselect item
+           
             ((ListView)sender).SelectedItem = null;
         }
     }

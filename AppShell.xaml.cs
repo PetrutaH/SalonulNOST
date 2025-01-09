@@ -11,17 +11,17 @@ namespace SalonulNOST
             InitializeComponent();
         }
 
-        // Eveniment pentru a accesa pagina de profil
+        
         async void OnProfileMenuClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ProfilePage());
         }
 
-        // Eveniment pentru a deconecta utilizatorul
+    
         async void OnLogoutMenuClicked(object sender, EventArgs e)
         {
-            Preferences.Remove("UserEmail");  // Șterge email-ul din preferințe
-            await Navigation.PushAsync(new LoginPage());  // Mergi la pagina de logare
+            Preferences.Remove("UserEmail");  
+            await Navigation.PushAsync(new LoginPage());  
         }
     }
 }

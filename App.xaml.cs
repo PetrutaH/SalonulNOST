@@ -13,20 +13,20 @@ namespace SalonulNOST
         {
             InitializeComponent();
 
-            // Calea bazei de date
+            
             var dbPath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "salon.db3");
             Database = new SalonDatabase(dbPath);
 
             var userEmail = Preferences.Get("UserEmail", string.Empty);
 
-            // Verifică dacă utilizatorul este logat sau nu
+           
             if (string.IsNullOrEmpty(userEmail))
             {
-                MainPage = new NavigationPage(new LoginPage()); // Dacă nu este logat, du-l pe LoginPage
+                MainPage = new NavigationPage(new LoginPage()); 
             }
             else
             {
-                MainPage = new NavigationPage(new AppShell()); // Dacă este logat, du-l pe AppShell (navigare)
+                MainPage = new NavigationPage(new AppShell()); 
             }
         }
     }

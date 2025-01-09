@@ -10,12 +10,12 @@
             <Label Text="Hello, bun venit la SalonulNost!" Style="{StaticResource Headline}" SemanticProperties.HeadingLevel="Level1" />
             <Label Text="Welcome to .NET Multi-platform App UI" Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level2" />
 
-            <!-- Buton pentru Profil, vizibil doar daca utilizatorul este logat -->
+           
             <Button Text="Go to Profile" Clicked="OnProfileButtonClicked" HorizontalOptions="Fill" IsVisible="False" x:Name="ProfileButton"/>
             <Button Text="Logout" Clicked="OnLogoutButtonClicked" HorizontalOptions="Fill" IsVisible="False" x:Name="LogoutButton"/>
 
            
-            <!-- Buton de Count -->
+        
             <Button x:Name="CounterBtn" Text="Click me" SemanticProperties.Hint="Counts the number of times you click" Clicked="OnCounterClicked" HorizontalOptions="Fill"/>
         </VerticalStackLayout>
     </ScrollView>

@@ -18,12 +18,12 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <!-- Buton pentru Salvare -->
+            
             <Button x:Name="SaveButton"
                     Text="Save" 
                     Clicked="OnSaveButtonClicked" />
 
-            <!-- Buton pentru stergere -->
+          
             <Button x:Name="DeleteButton"
                     Grid.Column="1" 
                     Text="Delete" 
