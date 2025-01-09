@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SalonulNOST.ServicePage"
+             Title="Edit Service">
+
+    <StackLayout Margin="20">
+        <Editor Placeholder="Enter the name of the service" 
+                Text="{Binding Name}" 
+                HeightRequest="40" />
+        <Editor Placeholder="Enter the description of the service" 
+                Text="{Binding Description}" 
+                HeightRequest="100" />
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Buton pentru Salvare -->
+            <Button x:Name="SaveButton"
+                    Text="Save" 
+                    Clicked="OnSaveButtonClicked" />
+
+            <!-- Buton pentru stergere -->
+            <Button x:Name="DeleteButton"
+                    Grid.Column="1" 
+                    Text="Delete" 
+                    Clicked="OnDeleteButtonClicked"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>

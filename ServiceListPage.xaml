@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SalonulNOST.ServiceListPage"
+             Title="Lista Serviciilor">
+
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="15">
+            <Label Text="Lista Serviciilor" FontSize="18" HorizontalOptions="Center" />
+
+            <ListView x:Name="listView"
+                      Margin="0"
+                      ItemSelected="OnListViewItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" 
+                                  Detail="{Binding Price, StringFormat='Preț: {0:C}'}" >
+                            <TextCell.ContextActions>
+                                <MenuItem Text="Editează" CommandParameter="{Binding .}" Clicked="OnEditClicked"/>
+                                <MenuItem Text="Șterge" CommandParameter="{Binding .}" Clicked="OnDeleteClicked"/>
+                            </TextCell.ContextActions>
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
